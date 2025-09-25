@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="Assem2.SLDASM" >
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-6.9231E-17 -2.9198E-17 -0.00016699"
+        rpy="0 0 0" />
+      <mass
+        value="18.813" />
+      <inertia
+        ixx="0.1344"
+        ixy="3.2823E-18"
+        ixz="1.4271E-18"
+        iyy="0.42845"
+        iyz="3.8622E-19"
+        izz="0.49222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="br_Link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 0.015 1.3878E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.52072" />
+      <inertia
+        ixx="0.00078433"
+        ixy="-2.1839E-36"
+        ixz="1.8617E-35"
+        iyy="0.0014906"
+        iyz="2.4726E-18"
+        izz="0.00078433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/br_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/br_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br-joint"
+    type="continuous">
+    <origin
+      xyz="-0.2 -0.175 -0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="bl_Link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 -0.015 -3.1225E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.52072" />
+      <inertia
+        ixx="0.00078433"
+        ixy="3.341E-49"
+        ixz="1.8617E-35"
+        iyy="0.0014906"
+        iyz="2.4726E-18"
+        izz="0.00078433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/bl_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/bl_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl-joint"
+    type="continuous">
+    <origin
+      xyz="-0.2 0.175 -0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fr_Link">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 0.015 1.1796E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.52072" />
+      <inertia
+        ixx="0.00078433"
+        ixy="1.173E-36"
+        ixz="-1.7997E-39"
+        iyy="0.0014906"
+        iyz="2.4726E-18"
+        izz="0.00078433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/fr_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/fr_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr-joint"
+    type="continuous">
+    <origin
+      xyz="0.2 -0.175 -0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fl_Link">
+    <inertial>
+      <origin
+        xyz="2.7756E-17 -0.015 -4.8572E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.52072" />
+      <inertia
+        ixx="0.00078433"
+        ixy="-2.1839E-36"
+        ixz="1.8617E-35"
+        iyy="0.0014906"
+        iyz="2.4726E-18"
+        izz="0.00078433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/fl_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/visual/fl_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl-joint"
+    type="continuous">
+    <origin
+      xyz="0.2 0.175 -0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <gazebo>
+    <plugin
+        filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+        <!-- Topic for the command input -->
+        <topic>/cmd_vel</topic>
+
+        <!-- Wheel joints -->
+        <left_joint>fl-joint</left_joint>
+        <left_joint>bl-joint</left_joint>
+        <right_joint>fr-joint</right_joint>
+        <right_joint>br-joint</right_joint>
+
+        <!-- Wheel parameters -->
+        <wheel_separation>0.45</wheel_separation>
+        <wheel_radius>0.1</wheel_radius> 
+
+        <!-- Control gains and limits (optional) -->
+        <max_velocity>3.0</max_velocity> 
+        <max_linear_acceleration>1</max_linear_acceleration>
+        <min_linear_acceleration>-1</min_linear_acceleration>
+        <max_angular_acceleration>2</max_angular_acceleration>
+        <min_angular_acceleration>-2</min_angular_acceleration>
+        <max_linear_velocity>0.5</max_linear_velocity>
+        <min_linear_velocity>-0.5</min_linear_velocity>
+        <max_angular_velocity>1</max_angular_velocity>
+        <min_angular_velocity>-1</min_angular_velocity>
+        
+        <!-- Other parameters (optional) -->
+        <odom_topic>odom</odom_topic> 
+        <tf_topic>tf</tf_topic>
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_footprint</child_frame_id>
+        <odom_publish_frequency>30</odom_publish_frequency>
+    </plugin>
+
+    <plugin
+        filename="gz-sim-joint-state-publisher-system"
+        name="gz::sim::systems::JointStatePublisher">
+        <topic>joint_states</topic> <!--from <ros><remapping> -->
+        <joint_name>fl-joint</joint_name>
+        <joint_name>fr-joint</joint_name>
+        <joint_name>bl-joint</joint_name>
+        <joint_name>br-joint</joint_name>
+    </plugin>
+  </gazebo>
+
+</robot>
